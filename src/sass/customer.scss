@@ -1,0 +1,92 @@
+
+@import "roots.scss";
+
+
+.section.customer {
+    padding: 174px 0 413px 0;
+    text-align: center;
+
+    @media screen and (min-width: $mobile) {
+        padding: 235px 0 409px 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding: 283px 0 379px 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 464px 0 228px 0;
+    }
+
+    .tumb {
+        max-width: 85px;
+        max-height: 85px;
+        width: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .reviews {
+        max-width: 280px;
+        padding: 35px 39px;
+        margin: 32px auto 32px auto;
+        background-color: $green-background-color;
+        border-radius: 10px;
+
+        font-size: 12px;
+        line-height: 2.55;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: $white-text-color;
+
+        @media screen and (min-width: $tablet) {
+            max-width: 704px;
+            padding: 28px 80px 29px 80px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.92;
+            border-radius: 24px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            max-width: 968px;
+            font-size: 16px;
+            padding: 43px 74px 42px 73px;
+        }
+    }
+
+    .slide-name {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.86;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+            line-height: 1.56;
+        }
+    }
+
+    .overlay-buttons {
+        .slide-button {
+            width: 12px;
+            height: 12px;
+            border: none;
+            border-radius: 50%;
+            background-color: $green-background-color;
+            margin-top: 12px;
+
+            &:hover {
+                cursor: url(../images/cursore.svg), pointer;
+            }
+
+            @media screen and (min-width: $tablet) {
+                margin-top: 32px;
+            }
+
+            &~.slide-button {
+                margin-left: 18px;
+            }
+        }
+    }
+}
