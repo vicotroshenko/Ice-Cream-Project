@@ -1,0 +1,308 @@
+@import "roots.scss";
+
+
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    overflow-y: auto;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 201;
+
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 568px;
+        width: 100%;
+        background-color: #FCFCFC;
+        border-radius: 10px;
+        z-index: 12;
+    
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 32px 44px;
+        max-height: 96vh;
+        overflow-y: auto;
+    
+    }
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+
+
+    }
+
+    .modal-container {
+        .form-feild {
+            .checkbox-container {
+                justify-content: center;
+                column-gap: 32px;
+                margin-bottom: 40px;
+
+                .form-label {
+                    position: relative;
+                    display: inline-block;
+                    max-width: 132px;
+                    width: 100%;
+                    height: 135px;
+                    margin-top: 105px;
+                    border-radius: 15px;
+                    padding-top: 95px;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 1.25;
+                    text-align: center;
+                    text-transform: uppercase;
+
+                    cursor: url(../images/cursore.svg), pointer;
+                    
+                    &.ice-box {
+                        border: 2px solid $modal-color-icecream;
+                        filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+                        border-radius: 15px;
+
+                        transition: background-color 200ms linear, transform 200ms linea;
+
+                        .ice-cream {
+                            background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+                            box-shadow: 0px 5px 19px rgba(10, 136, 23, 0.25);
+
+                            &::after {
+                                content: "";
+                                display: block;
+                                transform: translateY(-7px);
+                                max-width: 132px;
+                                width: 100%;
+                                height: 132px;
+                                border-radius: 50%;
+                                background: url(../images/ice-creem-1x.jpg) center/cover;
+
+                                @media screen and (min-device-pixel-ratio: 2),
+                                screen and (-webkit-min-device-pixel-ratio: 2),
+                                screen and (min-resolution: 192dpi),
+                                screen and (min-resolution: 2dppx) {
+                                    background-image: url(../images/ice-creem-2x.jpg);
+                                }
+                            }
+
+                        }
+                    }
+
+                    &.coffee-box {
+                        border: 2px solid $icecoffee-color;
+                        box-shadow: 0px 5px 19px rgba(212, 20, 67, 0.1);
+                        transition: background-color 200ms linear, transform 200ms linea;
+
+                        .ice-coffee {
+                            background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+                            box-shadow: 0px 5px 19px rgba(153, 114, 23, 0.25);
+
+                            &::after {
+                                content: "";
+                                display: block;
+                                transform: translateY(-7px);
+                                max-width: 132px;
+                                width: 100%;
+                                height: 132px;
+                                border-radius: 50%;
+                                background: url(../images/ice-coffee-1x.jpg) center/cover;
+
+                                @media screen and (min-device-pixel-ratio: 2),
+                                screen and (-webkit-min-device-pixel-ratio: 2),
+                                screen and (min-resolution: 192dpi),
+                                screen and (min-resolution: 2dppx) {
+                                    background-image: url(../images/ice-coffee-2x.jpg);
+                                }
+                            }
+
+                        }
+                    }
+
+                    &.milk-box {
+                        border: 2px solid $milkshakes-color;
+                        filter: drop-shadow(0px 5px 19px rgba(212, 20, 67, 0.1));
+                        border-radius: 15px;
+                        transition: background-color 200ms linear, transform 200ms linear;
+
+                        .milkshakes {
+                            background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+                            box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+
+                            &::after {
+                                content: "";
+                                display: block;
+                                transform: translateY(-7px);
+                                max-width: 132px;
+                                width: 100%;
+                                height: 132px;
+                                border-radius: 50%;
+                                background: url(../images/milkshakes-1x.jpg) center/cover;
+
+                                @media screen and (min-device-pixel-ratio: 2),
+                                screen and (-webkit-min-device-pixel-ratio: 2),
+                                screen and (min-resolution: 192dpi),
+                                screen and (min-resolution: 2dppx) {
+                                    background-image: url(../images/milkshakes-2x.jpg);
+                                }
+                            }
+                        }
+                    }
+
+                    .circle {
+                        display: block;
+                        position: absolute;
+                        top: -57px;
+                        left: 50%;
+                        max-width: 132px;
+                        width: 100%;
+                        max-height: 132px;
+                        height: 100%;
+                        transform: translateX(-50%);
+                        border-radius: 50%;
+                    }
+                }
+
+                .form-input.check {
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+
+                .form-input:checked+.ice-box {
+                    background-color: $modal-color-icecream;
+                    transform: scale(0.9);
+                    
+                }
+
+                .form-input:checked+.coffee-box {
+                    background-color: $icecoffee-color;
+                    transform: scale(0.9);
+                }
+
+                .form-input:checked+.milk-box {
+                    background-color: $milkshakes-color;
+                    transform: scale(0.9);
+                }
+
+                .form-checkbox {
+                    display: flex;
+                    column-gap: 32px;
+
+
+
+                }
+            }
+            
+        }
+
+    }
+
+}
+
+.button-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 32px;
+
+    .button {
+        padding: 12px 36px;
+    }
+}
+
+
+.button.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    max-width: 24px;
+    max-height: 24px;
+    padding: 0;
+    border: none;
+
+    .icon-close {
+        display: block;
+        fill: black;
+        width: 100%;
+        height: 24px;
+
+    }
+
+}
+
+.input-container {
+    max-width: 368px;
+    width: 100%;
+    margin: 0 auto;
+
+    .form-input {
+        width: 100%;
+        height: 42px;
+        background: rgba(248, 210, 78, 0.1);
+        border: 1px solid $modal-border-color;
+        border-radius: 10px;
+        padding-left: 16px;
+
+        &:focus+.form-label {
+            transform: translate(16px, -62px);
+        }
+
+        &:not(:placeholder-shown)+.form-label {
+            transform: translate(16px, -62px);
+        }
+
+
+
+    }
+
+    .form-comment {
+        width: 100%;
+        height: 84px;
+        background: rgba(248, 210, 78, 0.1);
+        border: 1px solid $modal-border-color;
+        border-radius: 10px;
+        padding: 11px;
+        resize:vertical;
+
+        &::placeholder {
+            font-family: "Montserrat";
+            font-size: 14px;
+            line-height: 1.4;
+            color: $black-text-color;
+        }
+
+
+    }
+
+    .form-label {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 1.4;
+        transform: translate(16px, -32px);
+
+    }
+
+}
+
+
+@keyframes slide-bck-center {
+    0% {
+      transform: translateZ(0);
+    }
+    100% {
+      transform: translateZ(-400px);
+    }
+  }
