@@ -1,0 +1,404 @@
+@import "roots.scss";
+
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@keyframes go {
+    0% {
+      transform: translateX(50px);
+    }
+  
+    100% {
+      transform: rotate(30);
+    }
+}
+
+
+.section.hero {
+
+    background-color: $green-background-color;
+
+
+    .container {
+        position: relative;
+        padding: 50px 20px 0 20px;
+
+        @media screen and (min-width: $mobile) {
+            padding-top: 40px;
+            padding-bottom: 150px;
+        }
+
+        @media screen and (min-width: $tablet) {
+            padding: 14px 32px 0 32px;
+
+        }
+
+        @media screen and (min-width: $desktop) {
+            padding: 31px 16px 0 16px;
+
+        }
+    }
+
+
+    .image {
+
+        &.points {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-width: 321px;
+            z-index: 1;
+
+            @media screen and (min-width: $tablet) {
+                display: none;
+            }
+
+            &-left {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: none;
+                max-width: 110px;
+                width: 100%;
+
+                z-index: 1;
+
+                @media screen and (min-width: $tablet) {
+                    display: block;
+                }
+
+                @media screen and (min-width: $desktop) {
+                    display: none;
+                }
+            }
+
+            &-right {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: none;
+                max-width: 182px;
+                width: 100%;
+                z-index: 1;
+
+                @media screen and (min-width: $tablet) {
+                    display: block;
+                }
+
+                @media screen and (min-width: $desktop) {
+                    display: none;
+                }
+            }
+
+            &-desktop {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: none;
+                width: 100%;
+
+                z-index: 1;
+
+                @media screen and (min-width: $desktop) {
+                    display: block;
+                }
+            }
+        }
+
+    }
+
+    .box-title {
+        display: inline-block;
+        z-index: 4;
+
+        @media screen and (min-width: $tablet) {
+            max-width: 376px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            max-width: 460px;
+            padding-top: 14px;
+           
+            animation-name: go;
+            animation-duration: 1.2s;
+            animation-timing-function: linear;
+        }
+
+        .big-word {
+            font-size: 34px;
+            line-height: 1;
+        }
+
+        .container-link {
+            display: flex;
+            column-gap: 12px;
+            align-items: center;
+            padding-top: 32px;
+            margin-bottom: 19px;
+
+            @media screen and (min-width: $mobile) {
+                margin-bottom: 0;
+            }
+
+            @media screen and (min-width: $tablet) {
+                padding-top: 24px;
+            }
+
+            @media screen and (min-width: $desktop) {
+                padding-top: 28px;
+            }
+
+            .link {
+                display: inline-block;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 1.21;
+
+                &.primery {
+                    color: #000000;
+                    border: 2px solid #F8D24E;
+                    border-radius: 8px;
+                    padding: 10px 23px;
+
+                    transition: border 250ms linear;
+
+                    &:hover {
+                        border: 2px solid $hover-color;
+                    }
+
+                    @media screen and (min-width: $tablet) {
+                        padding: 9px 25px;
+                        font-size: 12px;
+                        line-height: 1.33;
+                        letter-spacing: 0.02em;
+                    }
+
+                    @media screen and (min-width: $desktop) {
+                        padding: 10px 30px;
+                        font-size: 14px;
+                        line-height: 1.285;
+                    }
+
+                }
+
+                &.secondary {
+                    color: $orange-color;
+                    text-decoration: underline;
+
+                    transition: color 250ms linear;
+
+                    &:hover {
+                        color: $hover-color;
+                    }
+
+                    &:focus {
+                        color: $white;
+                    }
+
+                    &:disabled {
+                        color: $disabled;
+                    }
+
+                    @media screen and (min-width: $tablet) {
+                        padding: 9px 25px;
+                        border-radius: 8px;
+                    }
+
+                    @media screen and (min-width: $desktop) {
+                        padding: 10px 30px;
+                        font-size: 14px;
+                        line-height: 1.214;
+                    }
+
+                }
+            }
+        }
+
+        .fast-order {
+            display: none;
+            margin-top: 12px;
+            
+
+            @media screen and (min-width: $tablet) {
+                display: flex;
+                column-gap: 32px;
+                align-items: center;
+            }
+
+            @media screen and (min-width: $desktop) {
+
+                margin-top: 42px;
+                margin-bottom: 65px;
+                column-gap: 16px;
+
+            }
+
+            .tumb {
+                max-width: 152px;
+                max-height: 152px;
+                z-index: 4;
+
+                animation-name: spin;
+                animation-duration: 1.2s;
+                animation-timing-function: linear;
+                @media screen and (min-width: $desktop) {
+                    max-width: 225px;
+                    max-height: 225px;
+                }
+            }
+
+            .hero-text {
+                padding: 0;
+                max-width: 155px;
+                font-size: 12px;
+                line-height: 1.40;
+                color: $white-text-color;
+
+                @media screen and (min-width: $desktop) {
+                    max-width: 216px;
+                    font-size: 14px;
+
+                }
+
+            }
+
+            .button.arrow {
+                position: static;
+                display: none;
+                margin: 0;
+                fill: $white;
+                transform: translateX(0);
+
+                @media screen and (min-width: $tablet) {
+                    display: block;
+                    margin-top: 16px;
+                }
+
+                @media screen and (min-width: $desktop) {
+                    margin-top: 24px;
+                }
+            }
+        }
+
+    }
+
+    .box-image {
+        display: inline-block;
+        max-width: 177px;
+        width: 100%;
+        max-height: 217px;
+        margin-left: auto;
+        transform: translateX(-40px);
+
+        z-index: 4;
+
+        @media screen and (min-width: $mobile) {
+            position: absolute;
+            bottom: 0;
+            right: 25px;
+            max-width: 218px;
+            max-height: 267px;
+            transform: translateX(0);
+        }
+
+        @media screen and (min-width: $tablet) {
+            position: static;
+            max-width: 268px;
+            max-height: 329px;
+            transform: translateY(10px);
+            animation: bounce-in-top 1.1s both;
+        }
+
+        @media screen and (min-width: $desktop) {
+            max-width: 456px;
+            max-height: 560px;
+            padding-top: 0;
+            transform: translateX(0);
+        }
+
+    }
+
+    .box-cafe {
+        display: none;
+        max-width: 60px;
+        width: 100%;
+        font-size: 8px;
+        line-height: 1.25;
+        text-align: right;
+        color: $white-text-color;
+        padding-top: 14px;
+
+        @media screen and (min-width: $tablet) {
+            display: block;
+        }
+
+        @media screen and (min-width: $desktop) {
+            max-width: 79px;
+            font-size: 14px;
+            line-height: 1.214;
+        }
+
+        .style-bold {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 900;
+            font-size: 28px;
+            line-height: 1.214;
+            text-transform: uppercase;
+            color: $black-text-color;
+
+            @media screen and (min-width: $desktop) {
+                font-size: 46px;
+            }
+
+        }
+
+        .text+.text {
+            margin-top: 20px;
+        }
+    }
+
+}
+@keyframes bounce-in-top {
+    0% {
+      transform: translateY(-500px);
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      transform: translateY(-65px);
+      animation-timing-function: ease-in;
+    }
+    72% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    81% {
+      transform: translateY(-28px);
+      animation-timing-function: ease-in;
+    }
+    90% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    95% {
+      transform: translateY(-8px);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+  }
