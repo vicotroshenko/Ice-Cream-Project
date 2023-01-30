@@ -1,0 +1,107 @@
+@import "roots.scss";
+
+.oversubtitle {
+    display: block;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.22;
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 22px;
+        line-height: 1.219;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 30px;
+        animation: tracking-in-expand 0.9s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+    }
+}
+
+.undersubtitle {
+    display: block;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.22;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title {
+    max-width: 247px;
+    font-family: 'Seymour One', sans-serif;
+    font-size: 26px;
+    line-height: 1.23;
+    color: $white-text-color;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $desktop) {
+        max-width: 367px;
+        font-size: 38px;
+        line-height: 1.263;
+        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+    }
+}
+
+.subtitle {
+    font-family: 'Seymour One', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.26;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 34px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 36px;
+        animation: tracking-in-expand 0.9s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+    }
+}
+
+.subtitle-modal {
+    font-family: "Seymour One", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.subject {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.227;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+@keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+}
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
