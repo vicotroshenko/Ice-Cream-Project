@@ -1,11 +1,11 @@
 {
-  "name": "study-proj-demo",
+  "name": "Ice-Cream-Project",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://vicotroshenko.github.io/study-proj-demo",
+  "homepage": "https://vicotroshenko.github.io/Ice-Cream-Project",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /study-proj-demo/"
+    "build": "parcel build src/*.html --public-url /Ice-Cream-Project/"
   },
   "repository": {
     "type": "git",
