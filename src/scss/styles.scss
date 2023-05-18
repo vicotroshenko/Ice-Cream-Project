@@ -1,0 +1,139 @@
+@import "roots.scss";
+@import "title.scss";
+@import "button.scss";
+@import "header.scss";
+@import "hero.scss";
+@import "products.scss";
+@import "about.scss";
+@import "advantages.scss";
+@import "gallery.scss";
+@import "customer.scss";
+@import "contacts.scss";
+@import "footer.scss";
+@import "modal-buynow.scss";
+@import "modal-products.scss";
+@import "modal-mini.scss";
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+
+    h1 {
+        margin: 0;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    .list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.link {
+    display: inline-block;
+    margin: 0;
+    text-decoration: none;
+
+    &:hover {
+        cursor: url(../images/cursore.svg), pointer;
+    }
+}
+
+.image {
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $mobile) {
+        max-width: 480px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        max-width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: 1200px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.background {
+    background: url(../images/icecrem-back-480.png) center/cover;
+
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        background-image: url(../images/icecrem-back-480-2x.png);
+    }
+
+    @media screen and (min-width: $tablet) {
+        background: url(../images/icecrem-back-768.png) center/cover;
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url(../images/icecrem-back-768-2x.png);
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        background: url(../images/icecrem-back-1200.png) center/cover;
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url(../images/icecrem-back-1200-2x.png);
+        }
+        
+        
+    }
+}
+
+
+
